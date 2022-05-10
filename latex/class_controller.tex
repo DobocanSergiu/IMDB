@@ -1,0 +1,212 @@
+\hypertarget{class_controller}{}\doxysection{Controller Class Reference}
+\label{class_controller}\index{Controller@{Controller}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_controller_a1d8e1d8e242faa8b0147c917938cb8b5}{CAdd\+Movie}} (int Media\+Type, int id, string title, string director, int runtime, float budget, int release\+\_\+year, Rating rating, int genre)
+\item 
+void \mbox{\hyperlink{class_controller_a33a3f0b6aaa57a961f062828298e6ddc}{CAdd\+Show}} (int Media\+Type, int id, string title, string director, int runtime, float budget, int release\+\_\+year, Rating rating, int showtype)
+\item 
+void \mbox{\hyperlink{class_controller_a091410d29d7406f3ecf554ecdcd9634e}{CRemove}} (int id)
+\item 
+bool \mbox{\hyperlink{class_controller_a809a3c4cb927509ce0c403372b50a291}{CFind\+ID}} (int id)
+\item 
+void \mbox{\hyperlink{class_controller_a80d2965800caac341eca4e7f4c57dc4a}{CEdit}} (int id, string title, string director, int runtime, float budget, int release\+\_\+year, Rating rating, int other)
+\item 
+\mbox{\Hypertarget{class_controller_a565ea2ff5450d741c55919e10087975c}\label{class_controller_a565ea2ff5450d741c55919e10087975c}} 
+void {\bfseries plusk} ()
+\item 
+\mbox{\Hypertarget{class_controller_af4caa89592967bc23b339274b3d32e56}\label{class_controller_af4caa89592967bc23b339274b3d32e56}} 
+void {\bfseries minusk} ()
+\item 
+void \mbox{\hyperlink{class_controller_ad062de7250e362d8c5d8ac6ad45bedc5}{CShow\+All}} ()
+\item 
+void \mbox{\hyperlink{class_controller_a71ab737f65de16a98a95dfe849c4f207}{CImport}} ()
+\item 
+void \mbox{\hyperlink{class_controller_a148cd65fea3cd1e2e71ad667da9d2192}{CExport}} ()
+\item 
+\mbox{\Hypertarget{class_controller_a5ff129304397c12e8913e05570aec0ff}\label{class_controller_a5ff129304397c12e8913e05570aec0ff}} 
+bool {\bfseries Undo} ()
+\item 
+\mbox{\Hypertarget{class_controller_a8da3fc4ffe42733e55dcd82ea20135fe}\label{class_controller_a8da3fc4ffe42733e55dcd82ea20135fe}} 
+bool {\bfseries Redo} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_controller_ae3ae0bad8808d1533d83119d3cac94a4}\label{class_controller_ae3ae0bad8808d1533d83119d3cac94a4}} 
+\mbox{\hyperlink{class_visual_media_repo}{Visual\+Media\+Repo}} {\bfseries myrepo}
+\begin{DoxyCompactList}\small\item\em undo redo next \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_controller_a76ebdbcee7347c56dba77b289bffe205}\label{class_controller_a76ebdbcee7347c56dba77b289bffe205}} 
+vector$<$ string $>$ {\bfseries moves}
+\item 
+\mbox{\Hypertarget{class_controller_ac1258c24687ae37e0851ce2f291842d3}\label{class_controller_ac1258c24687ae37e0851ce2f291842d3}} 
+vector$<$ \mbox{\hyperlink{class_visual_media}{Visual\+Media}} $\ast$ $>$ {\bfseries entries}
+\item 
+\mbox{\Hypertarget{class_controller_a54b59260f38155b0652c979ada6cafdb}\label{class_controller_a54b59260f38155b0652c979ada6cafdb}} 
+int {\bfseries k} = -\/1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_controller_a1d8e1d8e242faa8b0147c917938cb8b5}\label{class_controller_a1d8e1d8e242faa8b0147c917938cb8b5}} 
+\index{Controller@{Controller}!CAddMovie@{CAddMovie}}
+\index{CAddMovie@{CAddMovie}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{CAddMovie()}{CAddMovie()}}
+{\footnotesize\ttfamily void Controller\+::\+CAdd\+Movie (\begin{DoxyParamCaption}\item[{int}]{Media\+Type,  }\item[{int}]{id,  }\item[{string}]{title,  }\item[{string}]{director,  }\item[{int}]{runtime,  }\item[{float}]{budget,  }\item[{int}]{release\+\_\+year,  }\item[{Rating}]{rating,  }\item[{int}]{genre }\end{DoxyParamCaption})}
+
+Controller-\/connects Repo level to UI level.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Media\+Type} & \\
+\hline
+{\em id} & \\
+\hline
+{\em title} & \\
+\hline
+{\em director} & \\
+\hline
+{\em runtime} & \\
+\hline
+{\em budget} & \\
+\hline
+{\em release\+\_\+year} & \\
+\hline
+{\em rating} & \\
+\hline
+{\em genre} & \\
+\hline
+\end{DoxyParams}
+CAdd\+Movie-\/\+Adds movie to repo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Media\+Type} & \\
+\hline
+{\em id} & \\
+\hline
+{\em title} & \\
+\hline
+{\em director} & \\
+\hline
+{\em runtime} & \\
+\hline
+{\em budget} & \\
+\hline
+{\em release\+\_\+year} & \\
+\hline
+{\em rating} & \\
+\hline
+{\em genre} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_controller_a33a3f0b6aaa57a961f062828298e6ddc}\label{class_controller_a33a3f0b6aaa57a961f062828298e6ddc}} 
+\index{Controller@{Controller}!CAddShow@{CAddShow}}
+\index{CAddShow@{CAddShow}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{CAddShow()}{CAddShow()}}
+{\footnotesize\ttfamily void Controller\+::\+CAdd\+Show (\begin{DoxyParamCaption}\item[{int}]{Media\+Type,  }\item[{int}]{id,  }\item[{string}]{title,  }\item[{string}]{director,  }\item[{int}]{runtime,  }\item[{float}]{budget,  }\item[{int}]{release\+\_\+year,  }\item[{Rating}]{rating,  }\item[{int}]{showtype }\end{DoxyParamCaption})}
+
+CAdd\+Show-\/\+Adds show to repo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Media\+Type} & \\
+\hline
+{\em id} & \\
+\hline
+{\em title} & \\
+\hline
+{\em director} & \\
+\hline
+{\em runtime} & \\
+\hline
+{\em budget} & \\
+\hline
+{\em release\+\_\+year} & \\
+\hline
+{\em rating} & \\
+\hline
+{\em showtype} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_controller_a80d2965800caac341eca4e7f4c57dc4a}\label{class_controller_a80d2965800caac341eca4e7f4c57dc4a}} 
+\index{Controller@{Controller}!CEdit@{CEdit}}
+\index{CEdit@{CEdit}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{CEdit()}{CEdit()}}
+{\footnotesize\ttfamily void Controller\+::\+CEdit (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{string}]{title,  }\item[{string}]{director,  }\item[{int}]{runtime,  }\item[{float}]{budget,  }\item[{int}]{release\+\_\+year,  }\item[{Rating}]{rating,  }\item[{int}]{other }\end{DoxyParamCaption})}
+
+CEdit-\/\+Edits repo item.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em title} & \\
+\hline
+{\em director} & \\
+\hline
+{\em runtime} & \\
+\hline
+{\em budget} & \\
+\hline
+{\em release\+\_\+year} & \\
+\hline
+{\em rating} & \\
+\hline
+{\em other} & \\
+\hline
+\end{DoxyParams}
+SCHIMBARE SAR PUTEA SA NU SE SALVEZE PT CA II IN If\mbox{\Hypertarget{class_controller_a148cd65fea3cd1e2e71ad667da9d2192}\label{class_controller_a148cd65fea3cd1e2e71ad667da9d2192}} 
+\index{Controller@{Controller}!CExport@{CExport}}
+\index{CExport@{CExport}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{CExport()}{CExport()}}
+{\footnotesize\ttfamily void Controller\+::\+CExport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+CExport-\/\+Exports elements from repo to csv file.\mbox{\Hypertarget{class_controller_a809a3c4cb927509ce0c403372b50a291}\label{class_controller_a809a3c4cb927509ce0c403372b50a291}} 
+\index{Controller@{Controller}!CFindID@{CFindID}}
+\index{CFindID@{CFindID}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{CFindID()}{CFindID()}}
+{\footnotesize\ttfamily bool Controller\+::\+CFind\+ID (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+CFind\+ID-\/\+Returns true if id is found .
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controller_a71ab737f65de16a98a95dfe849c4f207}\label{class_controller_a71ab737f65de16a98a95dfe849c4f207}} 
+\index{Controller@{Controller}!CImport@{CImport}}
+\index{CImport@{CImport}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{CImport()}{CImport()}}
+{\footnotesize\ttfamily void Controller\+::\+CImport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+CImport-\/\+Imports elements from csv file into repo.\mbox{\Hypertarget{class_controller_a091410d29d7406f3ecf554ecdcd9634e}\label{class_controller_a091410d29d7406f3ecf554ecdcd9634e}} 
+\index{Controller@{Controller}!CRemove@{CRemove}}
+\index{CRemove@{CRemove}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{CRemove()}{CRemove()}}
+{\footnotesize\ttfamily void Controller\+::\+CRemove (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+CRemove-\/removes item from repo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_controller_ad062de7250e362d8c5d8ac6ad45bedc5}\label{class_controller_ad062de7250e362d8c5d8ac6ad45bedc5}} 
+\index{Controller@{Controller}!CShowAll@{CShowAll}}
+\index{CShowAll@{CShowAll}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{CShowAll()}{CShowAll()}}
+{\footnotesize\ttfamily void Controller\+::\+CShow\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+CShow\+All-\/\+Outputs all elements from repo.
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Controller.\+h\item 
+Controller.\+cpp\end{DoxyCompactItemize}

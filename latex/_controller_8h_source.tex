@@ -1,0 +1,33 @@
+\hypertarget{_controller_8h_source}{}\doxysection{Controller.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include"{}Repo.h"{}}}
+\DoxyCodeLine{2 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{class_controller}{Controller}} \{}
+\DoxyCodeLine{5 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_a1d8e1d8e242faa8b0147c917938cb8b5}{CAddMovie}}(\textcolor{keywordtype}{int} MediaType,\textcolor{keywordtype}{int} \textcolor{keywordtype}{id},\textcolor{keywordtype}{string} title,\textcolor{keywordtype}{string} director,\textcolor{keywordtype}{int} runtime,\textcolor{keywordtype}{float} budget,\textcolor{keywordtype}{int} release\_year,Rating rating, \textcolor{keywordtype}{int} genre);}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_a33a3f0b6aaa57a961f062828298e6ddc}{CAddShow}}(\textcolor{keywordtype}{int} MediaType, \textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{string} title, \textcolor{keywordtype}{string} director, \textcolor{keywordtype}{int} runtime, \textcolor{keywordtype}{float} budget, \textcolor{keywordtype}{int} release\_year, Rating rating, \textcolor{keywordtype}{int} showtype);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_a091410d29d7406f3ecf554ecdcd9634e}{CRemove}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{22     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_controller_a809a3c4cb927509ce0c403372b50a291}{CFindID}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_a80d2965800caac341eca4e7f4c57dc4a}{CEdit}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{string} title, \textcolor{keywordtype}{string} director, \textcolor{keywordtype}{int} runtime, \textcolor{keywordtype}{float} budget, \textcolor{keywordtype}{int} release\_year, Rating rating, \textcolor{keywordtype}{int} other);}
+\DoxyCodeLine{24     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} plusk() \{k++;\}}
+\DoxyCodeLine{25     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} minusk() \{ k-\/-\/; \}}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_ad062de7250e362d8c5d8ac6ad45bedc5}{CShowAll}}();}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_a71ab737f65de16a98a95dfe849c4f207}{CImport}}();}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_a148cd65fea3cd1e2e71ad667da9d2192}{CExport}}();}
+\DoxyCodeLine{29     \textcolor{keywordtype}{bool} Undo();}
+\DoxyCodeLine{30     \textcolor{keywordtype}{bool} Redo();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{35     \mbox{\hyperlink{class_visual_media_repo}{VisualMediaRepo}} \mbox{\hyperlink{class_controller_ae3ae0bad8808d1533d83119d3cac94a4}{myrepo}};}
+\DoxyCodeLine{36     vector<string> moves;}
+\DoxyCodeLine{37     vector<VisualMedia*> entries;}
+\DoxyCodeLine{38     \textcolor{keywordtype}{int} k = -\/1;}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \};}
+
+\end{DoxyCode}

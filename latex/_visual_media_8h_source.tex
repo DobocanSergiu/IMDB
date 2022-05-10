@@ -1,0 +1,99 @@
+\hypertarget{_visual_media_8h_source}{}\doxysection{Visual\+Media.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include<iostream>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include<vector>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include<string>}}
+\DoxyCodeLine{5 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{6 \textcolor{keyword}{enum class} Rating \{}
+\DoxyCodeLine{7     G,}
+\DoxyCodeLine{8     PG,}
+\DoxyCodeLine{9     PG\_13,}
+\DoxyCodeLine{10     R,}
+\DoxyCodeLine{11     NC\_17}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \};}
+\DoxyCodeLine{14 \textcolor{keyword}{enum class} MovieGenre \{}
+\DoxyCodeLine{15     ACTION,}
+\DoxyCodeLine{16     COMEDY,}
+\DoxyCodeLine{17     HORROR,}
+\DoxyCodeLine{18     ADVENTURE}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{enum class} ShowType \{}
+\DoxyCodeLine{23     FICTION,}
+\DoxyCodeLine{24     NON\_FICTION}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{class }\mbox{\hyperlink{class_visual_media}{VisualMedia}} \{}
+\DoxyCodeLine{29     }
+\DoxyCodeLine{30 \textcolor{keyword}{public}:}
+\DoxyCodeLine{43     \mbox{\hyperlink{class_visual_media_ac6a87ed16595d194815b13513e4793ad}{VisualMedia}}(\textcolor{keywordtype}{int} MediaType,\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{string} title, \textcolor{keywordtype}{string} director, \textcolor{keywordtype}{int} runtime, \textcolor{keywordtype}{float} budget, \textcolor{keywordtype}{int} release\_year, Rating rating);}
+\DoxyCodeLine{44     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} getId()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} this-\/>id; \}}
+\DoxyCodeLine{45     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} setId(\textcolor{keywordtype}{int} Id) \{ this-\/>\textcolor{keywordtype}{id} = Id; \}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} getMediaType()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} this-\/>MediaType; \}}
+\DoxyCodeLine{48     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} setMediaType() \{ this-\/>MediaType = MediaType; \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{keyword}{inline} \textcolor{keywordtype}{string} getTitle()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} this-\/>title;\}}
+\DoxyCodeLine{51     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} setTitle(\textcolor{keywordtype}{string} other) \{ this-\/>title = other; \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keyword}{inline} \textcolor{keywordtype}{string} getDirector()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} this-\/>director; \}}
+\DoxyCodeLine{54     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} setDirector(\textcolor{keywordtype}{string} other) \{ this-\/>director = other; \}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} getRuntime()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} this-\/>runtime; \}}
+\DoxyCodeLine{57     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} setRuntime(\textcolor{keywordtype}{int} other) \{ this-\/>runtime = other; \}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{keyword}{inline} \textcolor{keywordtype}{float} getBudget()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} this-\/>budget; \}}
+\DoxyCodeLine{60     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} setBudget(\textcolor{keywordtype}{float} other) \{ this-\/>budget = other; \}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} getRelease\_year()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} this-\/>release\_year; \}}
+\DoxyCodeLine{63     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} setRelease\_year(\textcolor{keywordtype}{int} other) \{ this-\/>release\_year = other; \}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     \textcolor{keyword}{inline} Rating getRating()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} this-\/>rating; \}}
+\DoxyCodeLine{67     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} setRating(Rating other) \{ this-\/>rating = other; \}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} setGenreOrType(\textcolor{keywordtype}{int} other)=0;}
+\DoxyCodeLine{70     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} getGenreOrType() = 0;}
+\DoxyCodeLine{71     \textcolor{keyword}{virtual} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_visual_media_a0e9a5e37325ca311c266156a1007eeb0}{toStringg}}();}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{74     }
+\DoxyCodeLine{75     \textcolor{keywordtype}{int} MediaType;}
+\DoxyCodeLine{76     \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{77     \textcolor{keywordtype}{string} title;}
+\DoxyCodeLine{78     \textcolor{keywordtype}{string} director;}
+\DoxyCodeLine{79     \textcolor{keywordtype}{int} runtime;}
+\DoxyCodeLine{80     \textcolor{keywordtype}{float} budget;}
+\DoxyCodeLine{81     \textcolor{keywordtype}{int} release\_year;}
+\DoxyCodeLine{82     Rating rating;}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{keyword}{class }\mbox{\hyperlink{class_movie}{Movie}} :\textcolor{keyword}{public} \mbox{\hyperlink{class_visual_media}{VisualMedia}} \{}
+\DoxyCodeLine{88 \textcolor{keyword}{public}:}
+\DoxyCodeLine{102     \mbox{\hyperlink{class_movie_ad9c7d3b87d34d2fc6dedb6b77417272a}{Movie}}(\textcolor{keywordtype}{int} MediaType,\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{string} title, \textcolor{keywordtype}{string} director, \textcolor{keywordtype}{int} runtime, \textcolor{keywordtype}{float} budget, \textcolor{keywordtype}{int} release\_year, Rating rating, MovieGenre genre);}
+\DoxyCodeLine{103     \textcolor{keywordtype}{int} getGenreOrType()  \{ \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int})this-\/>genre; \}}
+\DoxyCodeLine{104     \textcolor{keywordtype}{void} setGenreOrType(\textcolor{keywordtype}{int} other)\textcolor{keyword}{override}\{ this-\/>genre =(MovieGenre)other; \}}
+\DoxyCodeLine{105     \textcolor{keyword}{virtual} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_movie_a3499f7116355facfd51e0599ecc4ea88}{toStringg}}()\textcolor{keyword}{override};}
+\DoxyCodeLine{106 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{107     MovieGenre genre;}
+\DoxyCodeLine{108 \};}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111 \textcolor{keyword}{class }\mbox{\hyperlink{class_show}{Show}} :\textcolor{keyword}{public} \mbox{\hyperlink{class_visual_media}{VisualMedia}} \{}
+\DoxyCodeLine{112 \textcolor{keyword}{public}:}
+\DoxyCodeLine{126     \mbox{\hyperlink{class_show_a84d672ad9d10a5dbd8dd87a61ff0a854}{Show}}(\textcolor{keywordtype}{int} MediaType,\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{string} title, \textcolor{keywordtype}{string} director, \textcolor{keywordtype}{int} runtime, \textcolor{keywordtype}{float} budget, \textcolor{keywordtype}{int} release\_year, Rating rating, ShowType type);}
+\DoxyCodeLine{127     \textcolor{keywordtype}{int} getGenreOrType()  \{ \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int})this-\/>type; \}}
+\DoxyCodeLine{128     \textcolor{keywordtype}{void} setGenreOrType(\textcolor{keywordtype}{int} other)\textcolor{keyword}{override }\{ this-\/>type =(ShowType) other; \}}
+\DoxyCodeLine{129     \textcolor{keyword}{virtual} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_show_af293360ad60c6c58d7e8616fe0bb51ae}{toStringg}}()\textcolor{keyword}{override};}
+\DoxyCodeLine{130 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{131     ShowType type;}
+\DoxyCodeLine{132 \};}
+
+\end{DoxyCode}

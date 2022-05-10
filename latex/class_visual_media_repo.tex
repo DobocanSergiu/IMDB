@@ -1,0 +1,158 @@
+\hypertarget{class_visual_media_repo}{}\doxysection{Visual\+Media\+Repo Class Reference}
+\label{class_visual_media_repo}\index{VisualMediaRepo@{VisualMediaRepo}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_visual_media_repo_a8163b113510c7d9284dfb0f505f700dc}{Visual\+Media\+Repo}} ()
+\item 
+void \mbox{\hyperlink{class_visual_media_repo_a64958ebd38b1f5b3214084f777ac816a}{add\+Movie}} (\mbox{\hyperlink{class_movie}{Movie}} $\ast$movie\+\_\+a)
+\item 
+void \mbox{\hyperlink{class_visual_media_repo_a44f1c466689ecc0cd326a8e49fb0e1ef}{Add\+Show}} (\mbox{\hyperlink{class_show}{Show}} $\ast$show\+\_\+a)
+\item 
+bool \mbox{\hyperlink{class_visual_media_repo_a851eec3a4e095ca6bc2b64e8ffbeb59b}{Remove}} (int id)
+\item 
+bool \mbox{\hyperlink{class_visual_media_repo_a322ea49884d0aa91f0381ef5173bdf75}{Edit}} (int id, string title, string director, int runtime, float budget, int release\+\_\+year, Rating rating, int other)
+\item 
+\mbox{\Hypertarget{class_visual_media_repo_a299313d259d0e9f971aaa0f7ed164de4}\label{class_visual_media_repo_a299313d259d0e9f971aaa0f7ed164de4}} 
+\mbox{\hyperlink{class_visual_media}{Visual\+Media}} $\ast$ {\bfseries Search} (int id)
+\item 
+void \mbox{\hyperlink{class_visual_media_repo_a94d45e40c770ff1188f8c6d00b6c0dd8}{Show\+All}} ()
+\item 
+void \mbox{\hyperlink{class_visual_media_repo_a613ffdede95b2091655c30ad70427d27}{import\+CSV}} ()
+\item 
+void \mbox{\hyperlink{class_visual_media_repo_aab17fb6efa7adefacbb7a03ec74ec673}{export\+CSV}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_visual_media_repo_a8ddb98581e41dda56b791f7c8d27cb74}\label{class_visual_media_repo_a8ddb98581e41dda56b791f7c8d27cb74}} 
+vector$<$ \mbox{\hyperlink{class_visual_media}{Visual\+Media}} $\ast$ $>$ {\bfseries medias}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{class_visual_media_repo_a281885ceb73ddb2d994cdcdeee28fb10}{operator$<$$<$}} (ostream \&out, const \mbox{\hyperlink{class_visual_media_repo}{Visual\+Media\+Repo}} \&c)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_visual_media_repo_a8163b113510c7d9284dfb0f505f700dc}\label{class_visual_media_repo_a8163b113510c7d9284dfb0f505f700dc}} 
+\index{VisualMediaRepo@{VisualMediaRepo}!VisualMediaRepo@{VisualMediaRepo}}
+\index{VisualMediaRepo@{VisualMediaRepo}!VisualMediaRepo@{VisualMediaRepo}}
+\doxysubsubsection{\texorpdfstring{VisualMediaRepo()}{VisualMediaRepo()}}
+{\footnotesize\ttfamily Visual\+Media\+Repo\+::\+Visual\+Media\+Repo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Visual Media Repository that stores all movies and shows. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_visual_media_repo_a64958ebd38b1f5b3214084f777ac816a}\label{class_visual_media_repo_a64958ebd38b1f5b3214084f777ac816a}} 
+\index{VisualMediaRepo@{VisualMediaRepo}!addMovie@{addMovie}}
+\index{addMovie@{addMovie}!VisualMediaRepo@{VisualMediaRepo}}
+\doxysubsubsection{\texorpdfstring{addMovie()}{addMovie()}}
+{\footnotesize\ttfamily void Visual\+Media\+Repo\+::add\+Movie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_movie}{Movie}} $\ast$}]{movie\+\_\+a }\end{DoxyParamCaption})}
+
+add\+Movie-\/\+Adds movie to repository.
+
+
+\begin{DoxyParams}{Parameters}
+{\em movie\+\_\+a} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_visual_media_repo_a44f1c466689ecc0cd326a8e49fb0e1ef}\label{class_visual_media_repo_a44f1c466689ecc0cd326a8e49fb0e1ef}} 
+\index{VisualMediaRepo@{VisualMediaRepo}!AddShow@{AddShow}}
+\index{AddShow@{AddShow}!VisualMediaRepo@{VisualMediaRepo}}
+\doxysubsubsection{\texorpdfstring{AddShow()}{AddShow()}}
+{\footnotesize\ttfamily void Visual\+Media\+Repo\+::\+Add\+Show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_show}{Show}} $\ast$}]{show\+\_\+a }\end{DoxyParamCaption})}
+
+Add\+Show-\/\+Adds show to repository.
+
+
+\begin{DoxyParams}{Parameters}
+{\em show\+\_\+a} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_visual_media_repo_a322ea49884d0aa91f0381ef5173bdf75}\label{class_visual_media_repo_a322ea49884d0aa91f0381ef5173bdf75}} 
+\index{VisualMediaRepo@{VisualMediaRepo}!Edit@{Edit}}
+\index{Edit@{Edit}!VisualMediaRepo@{VisualMediaRepo}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}}
+{\footnotesize\ttfamily bool Visual\+Media\+Repo\+::\+Edit (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{string}]{title,  }\item[{string}]{director,  }\item[{int}]{runtime,  }\item[{float}]{budget,  }\item[{int}]{release\+\_\+year,  }\item[{Rating}]{rating,  }\item[{int}]{other }\end{DoxyParamCaption})}
+
+Edit-\/changes all entries of specifed item.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em title} & \\
+\hline
+{\em director} & \\
+\hline
+{\em runtime} & \\
+\hline
+{\em budget} & \\
+\hline
+{\em release\+\_\+year} & \\
+\hline
+{\em rating} & \\
+\hline
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_visual_media_repo_aab17fb6efa7adefacbb7a03ec74ec673}\label{class_visual_media_repo_aab17fb6efa7adefacbb7a03ec74ec673}} 
+\index{VisualMediaRepo@{VisualMediaRepo}!exportCSV@{exportCSV}}
+\index{exportCSV@{exportCSV}!VisualMediaRepo@{VisualMediaRepo}}
+\doxysubsubsection{\texorpdfstring{exportCSV()}{exportCSV()}}
+{\footnotesize\ttfamily void Visual\+Media\+Repo\+::export\+CSV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+export\+CSV-\/puts repo values in CSV file.\mbox{\Hypertarget{class_visual_media_repo_a613ffdede95b2091655c30ad70427d27}\label{class_visual_media_repo_a613ffdede95b2091655c30ad70427d27}} 
+\index{VisualMediaRepo@{VisualMediaRepo}!importCSV@{importCSV}}
+\index{importCSV@{importCSV}!VisualMediaRepo@{VisualMediaRepo}}
+\doxysubsubsection{\texorpdfstring{importCSV()}{importCSV()}}
+{\footnotesize\ttfamily void Visual\+Media\+Repo\+::import\+CSV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+import\+CSV-\/takes a csv file and puts values in repo.\mbox{\Hypertarget{class_visual_media_repo_a851eec3a4e095ca6bc2b64e8ffbeb59b}\label{class_visual_media_repo_a851eec3a4e095ca6bc2b64e8ffbeb59b}} 
+\index{VisualMediaRepo@{VisualMediaRepo}!Remove@{Remove}}
+\index{Remove@{Remove}!VisualMediaRepo@{VisualMediaRepo}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily bool Visual\+Media\+Repo\+::\+Remove (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+Remove-\/removes element with specified id from repo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_visual_media_repo_a94d45e40c770ff1188f8c6d00b6c0dd8}\label{class_visual_media_repo_a94d45e40c770ff1188f8c6d00b6c0dd8}} 
+\index{VisualMediaRepo@{VisualMediaRepo}!ShowAll@{ShowAll}}
+\index{ShowAll@{ShowAll}!VisualMediaRepo@{VisualMediaRepo}}
+\doxysubsubsection{\texorpdfstring{ShowAll()}{ShowAll()}}
+{\footnotesize\ttfamily void Visual\+Media\+Repo\+::\+Show\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Show\+All-\/\+Outputs all elements from repo.
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_visual_media_repo_a281885ceb73ddb2d994cdcdeee28fb10}\label{class_visual_media_repo_a281885ceb73ddb2d994cdcdeee28fb10}} 
+\index{VisualMediaRepo@{VisualMediaRepo}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!VisualMediaRepo@{VisualMediaRepo}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_visual_media_repo}{Visual\+Media\+Repo}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Stream operator\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} overloading-\/ equivalent to Show\+All.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & \\
+\hline
+{\em c} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Repo.\+h\item 
+Repo.\+cpp\end{DoxyCompactItemize}

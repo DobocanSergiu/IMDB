@@ -17,12 +17,14 @@ void Controller::CAddMovie(int MediaType, int id, string title, string director,
 	 */
 	//Movie cmovie(MediaType, id, title, director, runtime, budget, release_year, rating, genre);
 	//myrepo.addMovie(&cmovie);
+	
 	if (this->k != this->moves.size()-1)
 	{
-		int K = this->k;
+		int K = this->k+1;
 		this->entries.erase(this->entries.begin() + K, this->entries.end());
 		this->moves.erase(this->moves.begin() + K, this->moves.end());
 	}
+	
 
 
 	Movie* p = new Movie(MediaType, id, title, director, runtime, budget, release_year, rating, (MovieGenre)genre);
@@ -31,13 +33,13 @@ void Controller::CAddMovie(int MediaType, int id, string title, string director,
 	this->moves.push_back("ADD_MOVIE");
 	Movie* pp = new Movie(MediaType, id, title, director, runtime, budget, release_year, rating, (MovieGenre)genre);
 	this->entries.push_back(pp);
-	/*
+	
 	for (int i = 0; i < this->entries.size() ; i++)
 	{
 		cout << this->entries[i]->toStringg() << " " << this->moves[i] << '\n';
 	}
-	cout << "================" << '\n';
-	*/
+	cout <<k <<"================" << '\n';
+	
 
 
 	
@@ -61,13 +63,15 @@ void Controller::CAddShow(int MediaType, int id, string title, string director, 
 	 */
 	//Show cshow(MediaType, id, title, director, runtime, budget, release_year, rating, showtype);
 	//myrepo.AddShow(&cshow);
+	
 	if (this->k !=this->moves.size()-1)
 	{
-		int K = this->k;
+		int K = this->k+1;
 		this->entries.erase(this->entries.begin() +K, this->entries.end());
 		this->moves.erase(this->moves.begin() + K, this->moves.end());
 
 	}
+	
 	Show* p = new Show(MediaType, id, title, director, runtime, budget, release_year, rating, (ShowType)showtype);
 	myrepo.AddShow(p);
 
@@ -75,6 +79,12 @@ void Controller::CAddShow(int MediaType, int id, string title, string director, 
 	this->moves.push_back("ADD_SHOW");
 	Show* pp = new Show(MediaType, id, title, director, runtime, budget, release_year, rating, (ShowType)showtype);
 	this->entries.push_back(pp);
+	for (int i = 0; i < this->entries.size(); i++)
+	{
+		cout << this->entries[i]->toStringg() << " " << this->moves[i] << '\n';
+	}
+	cout << k << "================" << '\n';
+
 }
 
 void Controller::CRemove(int id)
@@ -84,13 +94,15 @@ void Controller::CRemove(int id)
 	 * 
 	 * \param id
 	 */
+	
 	if (this->k != this->moves.size()-1)
 	{
-		int K = this->k;
+		int K = this->k+1;
 		this->entries.erase(this->entries.begin() + K, this->entries.end());
 		this->moves.erase(this->moves.begin() + K, this->moves.end());
 
 	}
+	
 
 	VisualMedia* item = this->myrepo.Search(id);
 	if (item->getMediaType() == 1)
@@ -111,6 +123,12 @@ void Controller::CRemove(int id)
 
 
 	}
+	for (int i = 0; i < this->entries.size(); i++)
+	{
+		cout << this->entries[i]->toStringg() << " " << this->moves[i] << '\n';
+	}
+	cout << k << "================" << '\n';
+
 	
 	
 }
@@ -140,6 +158,7 @@ void Controller::CEdit(int id, string title, string director, int runtime, float
 	 * \param rating
 	 * \param other
 	 */
+	/*
 	if (this->k != this->moves.size()-1)
 	{
 		int K = this->k;
@@ -147,28 +166,29 @@ void Controller::CEdit(int id, string title, string director, int runtime, float
 		this->moves.erase(this->moves.begin() + K, this->moves.end());
 	
 	}
+	*/
 
 	//bool rez;
 	VisualMedia* p=this->myrepo.Search(id);
 	if (p->getMediaType() == 1)
 	{
 		Movie* pm1 = new Movie(1, p->getId(), p->getTitle(), p->getDirector(), p->getRuntime(), p->getBudget(), p->getRelease_year(), p->getRating(), (MovieGenre)p->getGenreOrType());
-		k++;
-		this->moves.push_back("BEFORE_EDIT");
-		this->entries.push_back(pm1);
+		//k++;
+		//this->moves.push_back("BEFORE_EDIT");
+		//this->entries.push_back(pm1);
 		if (myrepo.Edit(id, title, director, runtime, budget, release_year, rating, other) == true)
 		{
 			Movie* pm2 = new Movie(1, id, title, director, runtime, budget, release_year, rating, (MovieGenre)other);
-			k++;
-			this->moves.push_back("AFTER_EDIT");
-			this->entries.push_back(pm2);
+			//k++;
+			//this->moves.push_back("AFTER_EDIT");
+			//this->entries.push_back(pm2);
 		}
 		else
 		{
-			this->moves.erase(this->moves.begin() + k);
-			this->entries.erase(this->entries.begin() + k);
+			//this->moves.erase(this->moves.begin() + k);
+			//this->entries.erase(this->entries.begin() + k);
 
-			k--;
+			//k--;
 
 		}
 
@@ -178,23 +198,23 @@ void Controller::CEdit(int id, string title, string director, int runtime, float
 	else if (p->getMediaType() == 2)
 	{
 		Show* pm1 = new Show(1, p->getId(), p->getTitle(), p->getDirector(), p->getRuntime(), p->getBudget(), p->getRelease_year(), p->getRating(), (ShowType)p->getGenreOrType());
-		k++;
-		this->moves.push_back("BEFORE_EDIT");
-		this->entries.push_back(pm1);
+		//k++;
+		//this->moves.push_back("BEFORE_EDIT");
+		//this->entries.push_back(pm1);
 		/// SCHIMBARE SAR PUTEA SA NU SE SALVEZE PT CA II IN If
 		if (myrepo.Edit(id, title, director, runtime, budget, release_year, rating, other) == true)
 		{
 			Show* pm2 = new Show(1, id, title, director, runtime, budget, release_year, rating, (ShowType)other);
-			k++;
-			this->moves.push_back("AFTER_EDIT");
-			this->entries.push_back(pm2);
+			//k++;
+			//this->moves.push_back("AFTER_EDIT");
+			//this->entries.push_back(pm2);
 		}
 		else
 		{
-			this->moves.erase(this->moves.begin() + k);
-			this->entries.erase(this->entries.begin() + k);
+			//this->moves.erase(this->moves.begin() + k);
+			//this->entries.erase(this->entries.begin() + k);
 
-			k--;
+			//k--;
 
 		}
 	
@@ -240,7 +260,7 @@ void Controller::CExport()
 
 bool Controller::Undo()
 {
-	if (k >=1 && k < this->moves.size())
+	if (k >=-1 && k < this->moves.size())
 	{
 		if (this->moves[k] == "ADD_MOVIE")
 		{
@@ -266,70 +286,71 @@ bool Controller::Undo()
 			k--;
 
 		}
-		else if (this->moves[k] == "AFTER_EDIT")
-		{
-			k--;
-			this->myrepo.Edit(this->entries[k]->getId(), this->entries[k]->getTitle(), this->entries[k]->getDirector(), this->entries[k]->getRuntime(), this->entries[k]->getBudget(), this->entries[k]->getRelease_year(), this->entries[k]->getRating(),this->entries[k]->getGenreOrType());
-		   
-		}
+		
 	
+		for (int i = 0; i < this->entries.size(); i++)
+		{
+			cout << this->entries[i]->toStringg() << " " << this->moves[i] << '\n';
+		}
+		cout <<"move made" << k << "================" << '\n';
 
 		return true;
 		
 	}
+	for (int i = 0; i < this->entries.size(); i++)
+	{
+		cout << this->entries[i]->toStringg() << " " << this->moves[i] << '\n';
+	}
+	cout  <<k << "================" << '\n';
+
 	return false;
 }
 
 bool Controller::Redo()
 {
-	if (k >= 0 && k < this->moves.size()-1)
+	if (k >=-1 && k <this->moves.size()-1)
 	{
-		/*
-		for (int i = 0; i < this->entries.size(); i++)
-		{
-			cout << this->entries[i]->toStringg() << " " << this->moves[i] << '\n';
-		}
-		cout << "================" << '\n';
-		*/
-		if (this->moves[k] == "BEFORE_EDIT")
-		{
-		}
-		else {
-			k++;
-		}
-		if (this->moves[k] == "ADD_MOVIE")
+	
+		k++;
+		if (this->moves[k] == "ADD_MOVIE"||(k==-1&& this->moves[k] == "ADD_MOVIE"))
 		{
 			Movie* p = new Movie(1, this->entries[k]->getId(), this->entries[k]->getTitle(), this->entries[k]->getDirector(), this->entries[k]->getRuntime(), this->entries[k]->getBudget(), this->entries[k]->getRelease_year(), this->entries[k]->getRating(), (MovieGenre)this->entries[k]->getGenreOrType());
 			this->myrepo.addMovie(p);
 
 		}
-		else if (this->moves[k] == "ADD_SHOW")
+		else if (this->moves[k] == "ADD_SHOW"|| (k == -1 && this->moves[k] == "ADD_SHOW"))
 		{
 			Show* p = new Show(2, this->entries[k]->getId(), this->entries[k]->getTitle(), this->entries[k]->getDirector(), this->entries[k]->getRuntime(), this->entries[k]->getBudget(), this->entries[k]->getRelease_year(), this->entries[k]->getRating(), (ShowType)this->entries[k]->getGenreOrType());
 			this->myrepo.AddShow(p);
 
 
 		}
-		else if (this->moves[k] == "REMOVE_MOVIE")
+		else if (this->moves[k] == "REMOVE_MOVIE"|| (k == -1 && this->moves[k] == "REMOVE_MOVIE"))
 		{
 			this->myrepo.Remove(this->entries[k]->getId());
 		}
-		else if (this->moves[k] == "REMOVE_SHOW")
+		else if (this->moves[k] == "REMOVE_SHOW" || (k == -1 && this->moves[k] == "REMOVE_SHOW"))
 		{
 			this->myrepo.Remove(this->entries[k]->getId());
 
 		}
 		
-		else if (this->moves[k] == "BEFORE_EDIT")
-		{
-			
-			k++;
-			this->myrepo.Edit(this->entries[k]->getId(), this->entries[k]->getTitle(), this->entries[k]->getDirector(), this->entries[k]->getRuntime(), this->entries[k]->getBudget(), this->entries[k]->getRelease_year(), this->entries[k]->getRating(), this->entries[k]->getGenreOrType());
-			
-		}
 		
+		for (int i = 0; i < this->entries.size(); i++)
+		{
+			cout << this->entries[i]->toStringg() << " " << this->moves[i] << '\n';
+		}
+		cout << k << "================" << '\n';
+
+
 		return true;
 	}
+	for (int i = 0; i < this->entries.size(); i++)
+	{
+		cout << this->entries[i]->toStringg() << " " << this->moves[i] << '\n';
+	}
+	cout << k << "================" << '\n';
+
 	return false;
 
 }

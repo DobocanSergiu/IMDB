@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="Controller.h" />
     <ClInclude Include="Repo.h" />
+    <ClInclude Include="tests.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="VisualMedia.h" />
   </ItemGroup>

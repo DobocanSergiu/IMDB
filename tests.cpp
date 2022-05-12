@@ -1,6 +1,7 @@
+#include"tests.h"
 #include"UI.h"
 #include <cassert>
-void testVisualMedia()
+void TESTS::testVisualMedia()
 {
 	Movie testmovie(1, 1, "Title", "Director", 100, 100, 1999, (Rating)1, (MovieGenre)0);
 	Show testshow(2, 2, "Title", "Director", 10, 10, 1999, (Rating)0, (ShowType)0);
@@ -29,7 +30,7 @@ void testVisualMedia()
 	testshow.setDirector("NEWDIRECTOR");
 	assert(testshow.getDirector() == "NEWDIRECTOR");
 }
-void testRepo() {
+void TESTS::testRepo() {
 	VisualMediaRepo mystuff;
 	Movie testmovie(1, 1, "Title", "Director", 100, 100, 1999, (Rating)1, (MovieGenre)0);
 	Show testshow(2, 2, "Title", "Director", 10, 10, 1999, (Rating)0, (ShowType)0);
@@ -45,7 +46,7 @@ void testRepo() {
 	
 
 }
-void testController() {
+void TESTS::testController() {
 	Controller testcontroller;
 	testcontroller.CAddMovie(1, 1, "Title", "Director", 100, 100, 1999, (Rating)1, 0);
 	testcontroller.CAddShow(2, 2, "Title", "Director", 10, 10, 1999, (Rating)0, 0);
@@ -58,7 +59,7 @@ void testController() {
 
 
 }
-void runtests() {
+void TESTS::runtests() {
 	testVisualMedia();
 	testRepo();
 	testController();

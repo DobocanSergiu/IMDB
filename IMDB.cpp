@@ -1,14 +1,12 @@
 #include <iostream>
 #include"UI.h"
-#include<cassert>
-///#include"tests.cpp"
+#include"tests.h"
 using namespace std;
 
 int main()
 {
-	
+	TESTS::runtests();
 	int choice;
-	///runtests();
 	Menu mymenu;
 	mymenu.Import();
 	choice = -1;
